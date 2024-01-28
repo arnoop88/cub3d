@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsoto-do <lsoto-do@student.42barcel>       +#+  +:+       +#+        */
+/*   By: apodader <apodader@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 10:05:54 by lsoto-do          #+#    #+#             */
-/*   Updated: 2024/01/11 10:07:26 by lsoto-do         ###   ########.fr       */
+/*   Updated: 2024/01/28 13:24:20 by apodader         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,21 +83,21 @@ typedef struct s_ray
 {
 	t_point *start;
 	t_point *end;
-	
-	int		mapX;		//
-	int		mapY;		//
-	double	camera;		//
-	double	rayDirX;	//
-	double	rayDirY;	//
-	double	sideDistX;	//
-	double	sideDistY;	//
-	double	deltaDistX;	//
-	double	deltaDistY;	//
-	double	wallDist;	//
-	int		stepX;		//
-	int		stepY;		//
-	int		hit;		//
-	int		side;		//
+
+	int		mapX;		
+	int		mapY;		
+	double	camera;		
+	double	rayDirX;	
+	double	rayDirY;	
+	double	sideDistX;	
+	double	sideDistY;	
+	double	deltaDistX;	
+	double	deltaDistY;	
+	double	wallDist;	
+	int		stepX;		
+	int		stepY;		
+	int		hit;		
+	int		side;		
 
 	double 	dir_x;
 	double	dir_y;
@@ -194,7 +194,7 @@ bool	parse_file(int fd, t_prg *prg);
 
 void	get_hooks(t_prg *prg);
 void	update_window(t_prg *prg);
-int		make_move(t_prg *prg, int dir);
+int		make_move(t_prg *prg, int dir, int side);
 void	cast_ray(t_prg *prg);
 void	draw_map(t_prg *prg);
 void	raycaster(t_prg *prg);			//
