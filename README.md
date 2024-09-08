@@ -70,13 +70,12 @@ sudo apt-get install xorg libxext-dev libbsd-dev
 ## Running the Game
 
 To run the game, execute the program with a valid `.cub` map file:
-	```bash
+ 	
 	./cub3D maps/your_map.cub
-	```
+	
 Or run the game with bonus features:
-	```bash
+	
 	./cub3D_bonus maps/your_map.cub
-	```
 
 ## Controls
 
@@ -99,3 +98,18 @@ Maps should be stored in .cub format and meet the following criteria:
 - It can only be one either `N`, `S`, `E` or `W` which indicates player's initial spawning position and orientation.
 - The map must be closed (surrounded by walls).
 - For bonus, you can also place doors `2`, they must have a wall on each side at least.
+
+Example:
+
+ 	NO imgs/north.xpm
+	SO imgs/south.xpm
+	WE imgs/west.xpm
+	EA imgs/east.xpm
+	F 100, 125, 135
+	C 109,164,170
+	
+	11111111
+	11011001
+	10000W01
+	11011001
+	11111111
